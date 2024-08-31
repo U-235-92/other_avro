@@ -1,0 +1,46 @@
+{
+ "namespace": "com.other.avro",
+ "type": "record",
+ "name": "Figure",
+ "fields": [
+     {
+     	"name": "id", 
+     	"type": "int"
+     },
+     {
+     	"name": "points",
+     	"type": 
+     	{
+	     	"type": "array",
+	     	"items": 
+	     	{
+	     		"type": "record",
+	     		"name": "Point",
+	     		"namespace": "com.other.avro",
+	     		"fields": [
+	     			{
+	     				"name": "x", 
+	     				"type": "int"
+	     			},
+	     			{
+	     				"name": "y", 
+	     				"type": "int"
+	     			}
+	     		]
+	     	}
+	     }
+     },
+     {
+     	"name": "color", 
+     	"type": 
+     	{
+     		"type": "enum",
+     		"name": "Color",
+     		"symbols": [
+     			"RED", "GREEN", "BLUE"
+     		]
+     	}
+     	
+     }
+ ]
+}
